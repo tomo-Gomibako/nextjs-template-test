@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
-import Default from '@/layouts/dafault'
+import Default from '@/layouts/default'
+
 // import styles from '@/styles/pages/Home.module.css'
 
 const HomePage = () => {
