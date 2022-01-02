@@ -1,21 +1,24 @@
 import { FC } from 'react'
-import PropTypes from 'prop-types'
-
-import styles from '@/styles/layouts/Default.module.css'
+import { css } from '@emotion/react'
 
 const DefaultLayout: FC<{}> = ({ children }) => {
   return (
-    <div className={styles.container}>
+    <div>
       <header />
-      <main className={styles.main}>
+      <main
+        css={css`
+          width: 100%;
+          padding: 2rem 0;
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+        `}
+      >
         {children}
       </main>
       <footer />
     </div>
   )
-}
-DefaultLayout.propTypes = {
-  children: PropTypes.node.isRequired
 }
 
 export default DefaultLayout

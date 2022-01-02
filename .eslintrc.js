@@ -3,11 +3,7 @@ module.exports = {
     browser: true,
     es2020: true
   },
-  extends: [
-    'plugin:react/recommended',
-    'standard',
-    'standard-jsx'
-  ],
+  extends: ['plugin:react/recommended', 'standard', 'standard-jsx', 'prettier'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -16,25 +12,28 @@ module.exports = {
     ecmaVersion: 11,
     sourceType: 'module'
   },
-  plugins: [
-    'react',
-    '@typescript-eslint'
-  ],
+  plugins: ['react', '@typescript-eslint'],
   rules: {
-    'sort-imports': ['error', {
-      ignoreCase: false,
-      ignoreDeclarationSort: true,
-      ignoreMemberSort: false,
-      memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-      allowSeparatedGroups: false
-    }],
+    'sort-imports': [
+      'error',
+      {
+        ignoreCase: false,
+        ignoreDeclarationSort: true,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+        allowSeparatedGroups: false
+      }
+    ],
     'arrow-parens': ['error', 'always'],
     'require-await': 'error',
     '@typescript-eslint/type-annotation-spacing': 'error',
     'react/react-in-jsx-scope': 'off',
-    'react/jsx-filename-extension': [2, {
-      extensions: ['.js', '.jsx', '.ts', '.tsx']
-    }],
+    'react/jsx-filename-extension': [
+      2,
+      {
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
+      }
+    ],
     'react/jsx-sort-props': 'error'
   },
   settings: {

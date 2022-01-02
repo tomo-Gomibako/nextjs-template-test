@@ -1,8 +1,12 @@
 {
   "presets": [
-    "react-app"
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic",
+        "importSource": "@emotion/react"
+      }
+    ]
   ],
-  "plugins": [
-    "react-require"
-  ]
+  "plugins": ["@emotion/babel-plugin"]
 }

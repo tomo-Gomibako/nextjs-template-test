@@ -2,8 +2,6 @@ import Head from 'next/head'
 
 import Default from '@/layouts/default'
 
-// import styles from '@/styles/pages/Home.module.css'
-
 const HomePage = () => {
   return (
     <div>
@@ -13,9 +11,7 @@ const HomePage = () => {
       </Head>
 
       <Default>
-        <div>
-          Hello, World!
-        </div>
+        <div>Hello, World!</div>
       </Default>
     </div>
   )
