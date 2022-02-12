@@ -34,7 +34,19 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx']
       }
     ],
-    'react/jsx-sort-props': 'error'
+    'react/jsx-sort-props': 'error',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_'
+      }
+    ],
+    'no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_'
+      }
+    ]
   },
   settings: {
     react: {
