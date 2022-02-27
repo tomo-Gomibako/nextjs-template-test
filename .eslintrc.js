@@ -12,7 +12,7 @@ module.exports = {
     ecmaVersion: 11,
     sourceType: 'module'
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'react-hooks'],
   rules: {
     'sort-imports': [
       'error',
@@ -35,6 +35,7 @@ module.exports = {
       }
     ],
     'react/jsx-sort-props': 'error',
+    camelcase: 'warn',
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
@@ -46,7 +47,9 @@ module.exports = {
       {
         argsIgnorePattern: '^_'
       }
-    ]
+    ],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn'
   },
   settings: {
     react: {
