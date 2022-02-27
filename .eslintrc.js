@@ -14,20 +14,23 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'react-hooks'],
   rules: {
-    'sort-imports': [
+    '@typescript-eslint/no-unused-vars': [
       'error',
       {
-        ignoreCase: false,
-        ignoreDeclarationSort: true,
-        ignoreMemberSort: false,
-        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-        allowSeparatedGroups: false
+        argsIgnorePattern: '^_'
       }
     ],
-    'arrow-parens': ['error', 'always'],
-    'require-await': 'error',
     '@typescript-eslint/type-annotation-spacing': 'error',
-    'react/react-in-jsx-scope': 'off',
+    'arrow-parens': ['error', 'always'],
+    camelcase: 'warn',
+    'no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_'
+      }
+    ],
+    'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/rules-of-hooks': 'error',
     'react/jsx-filename-extension': [
       2,
       {
@@ -35,21 +38,18 @@ module.exports = {
       }
     ],
     'react/jsx-sort-props': 'error',
-    camelcase: 'warn',
-    '@typescript-eslint/no-unused-vars': [
+    'react/react-in-jsx-scope': 'off',
+    'require-await': 'error',
+    'sort-imports': [
       'error',
       {
-        argsIgnorePattern: '^_'
+        allowSeparatedGroups: false,
+        ignoreCase: false,
+        ignoreDeclarationSort: true,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
       }
-    ],
-    'no-unused-vars': [
-      'error',
-      {
-        argsIgnorePattern: '^_'
-      }
-    ],
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn'
+    ]
   },
   settings: {
     react: {
