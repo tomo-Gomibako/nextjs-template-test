@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Default from '@/layouts/default'
+import DefaultLayout from '@/layouts/default'
 
 const HomePage = () => {
   return (
@@ -9,9 +9,9 @@ const HomePage = () => {
         <link href='/favicon.ico' rel='icon' />
       </Head>
 
-      <Default>
+      <DefaultLayout>
         <div>Hello, World!</div>
-      </Default>
+      </DefaultLayout>
     </div>
   )
 }
