@@ -9,7 +9,7 @@
     "export": "next build && next export",
     "lint": "eslint . --ext .ts,.tsx",
     "pretty": "prettier --write .",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 --no-open",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
