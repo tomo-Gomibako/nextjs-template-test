@@ -3,7 +3,13 @@ module.exports = {
     browser: true,
     es2020: true
   },
-  extends: ['plugin:react/recommended', 'standard', 'standard-jsx', 'prettier'],
+  extends: [
+    'plugin:react/recommended',
+    'standard',
+    'standard-jsx',
+    'prettier',
+    'plugin:@typescript-eslint/recommended'
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -49,7 +55,8 @@ module.exports = {
         ignoreMemberSort: false,
         memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
       }
-    ]
+    ],
+    'react/no-unknown-property': ['error', { ignore: ['css'] }]
   },
   settings: {
     react: {

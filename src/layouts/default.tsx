@@ -1,7 +1,11 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 import { css } from '@emotion/react'
 
-const DefaultLayout: FC<{}> = ({ children }) => {
+type DefaultLayoutProps = {
+  children?: ReactNode
+}
+
+const DefaultLayout: FC<DefaultLayoutProps> = ({ children }) => {
   return (
     <div>
       <header />
