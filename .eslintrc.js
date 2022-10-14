@@ -4,11 +4,12 @@ module.exports = {
     es2020: true
   },
   extends: [
-    'plugin:react/recommended',
+    'prettier',
     'standard',
     'standard-jsx',
-    'prettier',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:storybook/recommended'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -23,7 +24,8 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
-        argsIgnorePattern: '^_'
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_'
       }
     ],
     '@typescript-eslint/type-annotation-spacing': 'error',
@@ -32,7 +34,8 @@ module.exports = {
     'no-unused-vars': [
       'error',
       {
-        argsIgnorePattern: '^_'
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_'
       }
     ],
     'react-hooks/exhaustive-deps': 'warn',
@@ -44,6 +47,13 @@ module.exports = {
       }
     ],
     'react/jsx-sort-props': 'error',
+    // eslint-plugin-reactがEmotionのcssを弾く？
+    'react/no-unknown-property': [
+      'error',
+      {
+        ignore: ['css']
+      }
+    ],
     'react/react-in-jsx-scope': 'off',
     'require-await': 'error',
     'sort-imports': [
@@ -55,8 +65,7 @@ module.exports = {
         ignoreMemberSort: false,
         memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
       }
-    ],
-    'react/no-unknown-property': ['error', { ignore: ['css'] }]
+    ]
   },
   settings: {
     react: {
