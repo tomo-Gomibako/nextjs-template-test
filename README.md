@@ -28,3 +28,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Prepare Husky
+
+If you use this template in monorepo, `husky install` should run in a directory placed `.git`.
+
+For example,
+
+```
+proj
+├── .git
+└── next
+```
+
+if Next app directory is named `next` in root directory, rewrite npm script `prepare` as below.
+
+```json
+"prepare": "cd .. && husky install next/.husky",
+```
