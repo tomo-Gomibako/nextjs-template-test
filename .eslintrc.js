@@ -21,6 +21,13 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'react-hooks'],
   rules: {
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        selector: ['class', 'enum', 'interface', 'typeAlias', 'typeParameter'],
+        format: ['PascalCase']
+      }
+    ],
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
