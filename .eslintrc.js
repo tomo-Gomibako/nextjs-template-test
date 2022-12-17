@@ -4,10 +4,11 @@ module.exports = {
     es2020: true
   },
   extends: [
-    'prettier',
     'standard',
     'standard-jsx',
     'plugin:@typescript-eslint/recommended',
+    'prettier',
+    // 'plugin:jest/recommended',
     'plugin:react/recommended',
     'plugin:storybook/recommended'
   ],
@@ -24,8 +25,8 @@ module.exports = {
     '@typescript-eslint/naming-convention': [
       'error',
       {
-        selector: ['class', 'enum', 'interface', 'typeAlias', 'typeParameter'],
-        format: ['PascalCase']
+        format: ['PascalCase'],
+        selector: ['class', 'enum', 'interface', 'typeAlias', 'typeParameter']
       }
     ],
     '@typescript-eslint/no-unused-vars': [
