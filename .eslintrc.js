@@ -8,7 +8,7 @@ module.exports = {
     'standard-jsx',
     'plugin:@typescript-eslint/recommended',
     'prettier',
-    // 'plugin:jest/recommended',
+    'plugin:jest/recommended',
     'plugin:react/recommended',
     'plugin:storybook/recommended'
   ],
