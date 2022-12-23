@@ -1,6 +1,5 @@
-import { NextApiRequest, NextApiResponse } from 'next'
-import nc from 'next-connect'
+import { handler } from '@/api/handler'
 
-export default nc<NextApiRequest, NextApiResponse>().get((_, res) => {
+export default handler().get((_, res) => {
   res.send('pong')
 })
