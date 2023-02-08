@@ -9,8 +9,7 @@ module.exports = {
   addons: ['@storybook/preset-typescript'],
   webpackFinal: async (config) => {
     config.resolve.alias = {
-      '@': path.resolve(__dirname, '../src'),
-      '@api': path.resolve(__dirname, '../src/pages/api')
+      '@': path.resolve(__dirname, '../src')
     }
     return config
   }
