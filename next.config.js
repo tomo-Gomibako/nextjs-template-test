@@ -1,3 +1,5 @@
 module.exports = {
-  trailingSlash: true
+  trailingSlash: true,
+  publicRuntimeConfig: {},
+  serverRuntimeConfig: {}
 }
