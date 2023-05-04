@@ -12,7 +12,10 @@
     "pretty": "prettier --write .",
     "storybook": "start-storybook -p 6006 --no-open",
     "build-storybook": "build-storybook",
-    "test": "jest"
+    "test": "jest",
+    "d:build": "docker build -t nextjs-template .",
+    "d:rm": "docker rm nextjs-template",
+    "d:start": "npm run d:rm && docker run --name nextjs-template -p 3000:3000 nextjs-template"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
