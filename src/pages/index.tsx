@@ -3,7 +3,7 @@ import DefaultLayout from '@/layouts/default'
 
 const HomePage = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Home</title>
         <link href='/favicon.ico' rel='icon' />
@@ -12,7 +12,7 @@ const HomePage = () => {
       <DefaultLayout>
         <div>Hello, World!</div>
       </DefaultLayout>
-    </div>
+    </>
   )
 }
 

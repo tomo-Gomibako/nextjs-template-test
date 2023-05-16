@@ -7,7 +7,7 @@ type DefaultLayoutProps = {
 
 const DefaultLayout: FC<DefaultLayoutProps> = ({ children }) => {
   return (
-    <div>
+    <>
       <header />
       <main
         css={css`
@@ -21,7 +21,7 @@ const DefaultLayout: FC<DefaultLayoutProps> = ({ children }) => {
         {children}
       </main>
       <footer />
-    </div>
+    </>
   )
 }
 
