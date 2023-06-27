@@ -1,4 +1,5 @@
 import store from '@/store'
+import { theme } from '@/theme'
 import { Global, ThemeProvider, css } from '@emotion/react'
 import { AppProps } from 'next/app'
 import 'normalize.css'
@@ -7,13 +8,7 @@ import { Provider } from 'react-redux'
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <Provider store={store}>
-      <ThemeProvider
-        theme={{
-          colors: {
-            primary: '#000'
-          }
-        }}
-      >
+      <ThemeProvider theme={theme}>
         <Component {...pageProps} />
         <Global
           styles={css`
