@@ -1,5 +1,5 @@
-import Head from 'next/head'
 import DefaultLayout from '@/layouts/default'
+import Head from 'next/head'
 
 const HomePage = () => {
   return (

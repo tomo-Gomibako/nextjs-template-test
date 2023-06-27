@@ -27,4 +27,5 @@ const reducer = combineReducers({
 })
 
 export const actions = slice.actions
+
 export default reducer

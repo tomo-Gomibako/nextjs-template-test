@@ -1,8 +1,8 @@
-import { Provider } from 'react-redux'
-import { AppProps } from 'next/app'
-import { Global, ThemeProvider, css } from '@emotion/react'
-import 'normalize.css'
 import store from '@/store'
+import { Global, ThemeProvider, css } from '@emotion/react'
+import { AppProps } from 'next/app'
+import 'normalize.css'
+import { Provider } from 'react-redux'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
