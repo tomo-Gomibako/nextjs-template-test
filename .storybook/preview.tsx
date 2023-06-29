@@ -1,5 +1,6 @@
 import { ThemeProvider } from '@emotion/react'
 import type { Preview } from '@storybook/react'
+import 'normalize.css'
 import React from 'react'
 import { theme } from '../src/theme'
 
