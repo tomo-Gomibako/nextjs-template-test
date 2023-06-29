@@ -1,8 +1,11 @@
-import { ThemeProvider } from '@emotion/react'
+import { Global, ThemeProvider, css } from '@emotion/react'
+import { withThemeFromJSXProvider } from '@storybook/addon-styling'
 import type { Preview } from '@storybook/react'
 import 'normalize.css'
 import React from 'react'
 import { theme } from '../src/theme'
+
+const GlobalStyles = () => <Global styles={css``} />
 
 const preview: Preview = {
   parameters: {
@@ -17,6 +20,9 @@ const preview: Preview = {
 }
 
 export const decorators = [
+  withThemeFromJSXProvider({
+    GlobalStyles
+  }),
   (Story) => (
     <ThemeProvider theme={theme}>
       <Story />
