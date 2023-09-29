@@ -1,5 +1,7 @@
-import { handler } from '@/api/handler'
+import { apiRouter } from '@/api/handler'
 
-export default handler().get((_, res) => {
-  res.send('pong')
-})
+export default apiRouter()
+  .get((_, res) => {
+    res.send('pong')
+  })
+  .handler()

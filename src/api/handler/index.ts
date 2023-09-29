@@ -1,4 +1,4 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import nc from 'next-connect'
+import { createRouter } from 'next-connect'
 
-export const handler = () => nc<NextApiRequest, NextApiResponse>()
+export const apiRouter = () => createRouter<NextApiRequest, NextApiResponse>()
