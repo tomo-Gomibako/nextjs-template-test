@@ -26,6 +26,6 @@ const reducer = combineReducers({
   loading: slice.reducer
 })
 
-export const actions = slice.actions
+export const loadingActions = slice.actions
 
 export default reducer
