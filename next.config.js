@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  trailingSlash: false,
+  publicRuntimeConfig: {},
+  serverRuntimeConfig: {}
+}
 
 module.exports = nextConfig
