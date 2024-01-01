@@ -1,7 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env zsh
 . "$(dirname -- "$0")/_/husky.sh"
-
-# nodenv (via anyenv) path
-export PATH="$PATH:$HOME/.anyenv/envs/nodenv/shims"
 
 npm run pretty
