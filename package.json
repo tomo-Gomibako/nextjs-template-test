@@ -6,6 +6,7 @@
     "dev": "TZ='Etc/UTC' next dev",
     "build": "next build",
     "start": "next start",
+    "type": "tsc --noEmit",
     "lint": "next lint",
     "pretty": "prettier --write .",
     "prepare": "husky install"
