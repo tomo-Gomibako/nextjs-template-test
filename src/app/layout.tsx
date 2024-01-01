@@ -1,13 +1,18 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import styles from './page.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='ja'>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <header>{/* TODO: header */}</header>
+        <main className={styles.main}>{children}</main>
+        <footer>{/* TODO: footer */}</footer>
+      </body>
     </html>
   )
 }
