@@ -6,6 +6,7 @@ type QueryValue = Primitive
 type Query = Record<string, QueryValue | undefined>
 
 export const enum RouteName {
+  apiPing = '/api/ping',
   top = '/'
 }
 
@@ -42,6 +43,7 @@ export const routeUrl = (routeName: RouteName, option: RouteUrlOption = {}) => {
   // const innerArgs = typeof args === 'string' ? [args] : args
 
   const path = match(routeName)
+    .with(RouteName.apiPing, () => `/api/ping`)
     .with(RouteName.top, () => `/`)
     .exhaustive()
 
