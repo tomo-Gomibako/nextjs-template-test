@@ -1,5 +1,5 @@
 module.exports = {
-  trailingSlash: true,
+  trailingSlash: false,
   publicRuntimeConfig: {
     stage: process.env.STAGE
   },
